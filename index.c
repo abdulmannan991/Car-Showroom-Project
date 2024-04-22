@@ -8,7 +8,7 @@ int main() {
     char *car_brands[] = {
        "1) Toyota",
         "2) Honda",
-        "3) Ford",
+        "3) Suzuki",
         "4) Volkswagen",
         "5) BMW",
         "6) Mercedes-Benz",
@@ -56,51 +56,38 @@ printf("Invalid Choice!\n");
     
 }
 
+printf("model No:- 20,21,22\n");
+ int model[] = {20, 21, 22};
+    int choices;
 
-//      int choice;
-//     printf("Use 1 to 20 numbering to select car brand: ");
-//     scanf("%d", &choice);
+    printf("Enter a model number: ");
+    scanf("%d", &choices);
 
-//     if (choice >= 1 && choice <= 20) {
-//         printf("You choose: %s\n", car_brands[choice - 1]);
-//     } else {
-//         printf("Invalid choice\n");
-//     return 0;
-// }
-//     };
+    int num_models = sizeof(model) / sizeof(model[0]); 
 
+    int i;
+    for (i = 0; i < num_models; i++) {
+        if (model[i] == choices) {
+            printf("Great choice! You chose model: %d\n", choices);
+            break;
+        }
+    }
 
+    if (i == num_models) {
+        printf("Invalid model\n");
+    }
 
-// int CarBrandList  = 1;
-// int exit = 0;
-// printf("Press 1 to see the car brands  or 0 to exit : ");
-// scanf("%d",&CarBrandList);
-
-// if (CarBrandList==1)
-// {
-//  printf("%s",CarBrandList)
-// }
-// else if (/* condition */)
-// {
-//     /* code */
-// }
-// else
-// {
-//     /* code */
-// }
-
-
-
- 
     
- 
-
-
-
- 
-    
-
-    return 0; 
+printf("Do you want to see the specifications? (Y/N): ");
+    char spec_choice;
+    scanf(" %c", &spec_choice);
+    if (spec_choice == 'Y' || spec_choice == 'y') {
+        printf("Specifications for %s:\n", Suzuki[car_choice - 1]);
+        // Print specifications here
+    } else {
+        printf("Alright, moving on...\n");
+    }
+  
 }
 
 
