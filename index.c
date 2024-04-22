@@ -16,17 +16,10 @@ int main() {
         "8) Nissan",
         "9) Audi",
         "10) Hyundai",
-        "11) Fiat Chrysler Automobiles (FCA)",
-        "12) Tesla",
-        "13) Subaru",
-        "14) Kia",
-        "15) Mazda",
-        "16) Volvo",
-        "17) Jaguar",
-        "18) Land Rover",
-        "19) Porsche",
-        "20) Mitsubishi"
+        
     };
+
+char *Suzuki[20] = {"1)Mehran", "2)Cultus", "3)Swift", "4)Wagon-R", "5)Alto", "6)Bolan"};
 
       for(int i = 0; i < sizeof(car_brands) / sizeof(car_brands[0]) ; i++){
         printf(" %s\n",car_brands[i]);
@@ -37,11 +30,31 @@ int main() {
     printf("Use 1 to 20 numbering to select car brand: ");
     scanf("%d", &choice);
 
-    if (choice >= 1 && choice <= 20) {
+    if (choice >= 1 && choice <= 10) {
         printf("You choose: %s\n", car_brands[choice - 1]);
     } else {
         printf("Invalid choice\n");
     }
+
+printf("Available cars\n");
+
+for(int i = 0 ; i < sizeof(Suzuki)/sizeof(car_brands[0]);i++){
+    printf("%s\n",Suzuki[i]);
+}
+
+int car_choice;
+printf("Enter 1 to 6 numbering to select a car\n");
+scanf("%d",&car_choice);
+if (car_choice>=1 &&car_choice <=6)
+{
+       printf("You choice this car %s\n",Suzuki[car_choice -1]);
+       printf("Which model would you like to see for %s?\n", Suzuki[car_choice - 1]);
+}
+else
+{
+printf("Invalid Choice!\n");
+    
+}
 
 
 //      int choice;
